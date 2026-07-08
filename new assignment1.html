@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            background-color: indigo;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .navbar a{
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .logo h4{
+            color: white;
+        }
+        .btn a{
+            color: white;
+            background-color: orangered;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all ease-in-out 0.2s;
+        }
+        .image1{
+            background-image: url(photo\ 2.jpg);
+            height: 100vh;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(0,0,0,0.4);
+            background-blend-mode: multiply;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .herotext{
+            text-align: center;
+            color: white;
+        }
+        .herotext h5{
+            display: inline-block;
+            margin: 0 auto 20px;
+            padding: 10px 20px;
+            font-family: 'Poppins',sans-serif;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+            background: rgba(0,0,0,0.4);
+            border-radius: 30px;
+        }
+        .herotext h1{
+            font-size: 90px;
+            margin: 20px 0;
+        }
+        .herotext h3{
+            width: 70%;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .box1{
+            background: #1a1741;
+            width:100%;
+            margin:auto;
+            padding:70px 0;
+        }
+        .box1 h3:first-child{
+            color:#15d2ff;
+            font-size:18px;
+            text-transform:uppercase;
+            font-weight:600;
+            letter-spacing:1px;
+        }
+        .box1 h1{
+            color:white;
+            font-family:'Oswald',sans-serif;
+            font-size:60px;
+            margin-top:8px;
+            margin-bottom:40px;
+        }
+        .box1>a{
+            float:right;
+            margin-top:-90px;
+            color:#15d2ff;
+            text-decoration:none;
+            font-size:18px;
+            font-weight:600;
+        }
+        .box{
+            width:40%;
+            height:340px;
+            display:inline-block;
+            vertical-align:top;
+            margin-right:2%;
+            border-radius:20px;
+            padding:40px 30px;
+            background-size:cover;
+            background-position:center;
+            position:relative;
+            overflow:hidden;
+        }
+        .box:nth-of-type(1){
+            background-image:
+            linear-gradient(rgba(10,10,30,.55),rgba(10,10,30,.75)),
+            url("photo 3.jpg");
+        }
+        .box:nth-of-type(2){
+            background-image:
+            linear-gradient(rgba(10,10,30,.55),rgba(10,10,30,.75)),
+            url("photo 4.jpg");
+            margin-right:0;
+        }
+        .box h4{
+            display:inline-block;
+            background:#ff7b1a;
+            color:white;
+            padding:8px 18px;
+            border-radius:30px;
+            font-size:13px;
+            margin-bottom:20px;
+        }
+        .box p:first-of-type{
+            color:#15d2ff;
+            font-weight:600;
+            margin-bottom:15px;
+        }
+        .box h2{
+            color:white;
+            font-size:40px;
+            font-family:'Oswald',sans-serif;
+            margin-bottom:15px;
+        }
+        .box p:nth-of-type(2){
+            color:#d0d0d7;
+            line-height:1.7;
+            width:95%;
+            margin-bottom:25px;
+        }
+        .box>a{
+            color:white;
+            text-decoration:none;
+            font-weight:600;
+        }
+        .box:hover{
+            transform:translateY(-8px);
+        }
+        .btn{
+            margin-top:25px;
+        }
+        .btn a{
+            background:#19c9f4;
+            color:white;
+            text-decoration:none;
+            padding:15px 30px;
+            border-radius:10px;
+            font-weight:600;
+            display:inline-block;
+        }
+        .btn a:hover{
+            background:#09b3dc;
+        }
+        .small-events{
+            display:flex;
+            justify-content:space-between;
+            margin-top:35px;
+            gap:20px;
+        }
+        .small-card{
+            width:33%;
+            display:flex;
+            align-items:center;
+            gap:15px;
+            background:#1a1741;
+            border:1px solid #5148ff;
+            border-radius:15px;
+            padding:15px;
+            transition: o.4s;
+        }
+        .small-card img{
+            width:90px;
+            height:70px;
+            object-fit:cover;
+            border-radius:10px;
+        }
+        .small-card p{
+            color:#15d2ff;
+            font-size:14px;
+            font-weight:600;
+        }
+        .small-card h3{
+            color:white;
+            margin:6px 0;
+            font-size:28px;
+            font-family:'Oswald',sans-serif;
+        }
+        .small-card h4{
+            color:#c8c8d0;
+            font-size:16px;
+            font-weight:400;
+        }
+        .small-card:hover{
+            transform:translateY(-5px);
+            border-color:#15d2ff;
+        }
+        .box1>a:hover,
+        .box>a:hover{
+            color:#15d2ff;
+        }
+        .box2{
+            background-color: #0e0b33;
+            height: 500px;
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .section1{
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .section1 h6{
+            color: cadetblue;
+            font-family: sans-serif;
+            font-size: small;
+            font-style: none;
+            margin-bottom:-25px
+        }
+        .section1 h3{
+            color: white;
+            font-family: sans-serif;
+            font-size: 25px;
+            font-style: none;
+            margin-bottom:-10px
+        }
+        .section1 p{
+            color: #b8b8cb;
+            font-size: 18px;
+            margin-bottom:5px
+        }
+        .sec1{
+            display: flex;
+            gap:15px;
+            flex-wrap:wrap;
+            margin-bottom:10px
+        }
+        .guys{
+            color: rgb(145, 145, 250);
+            background-color: blue;
+            border: 2px solid blue;
+            border-radius: 8px;
+        }
+        .girls{
+            color: rgb(235, 137, 137);
+            background-color: red;
+            border: 2px solid red;
+            border-radius: 8px;
+        }
+        .coed{
+            color: rgb(240, 142, 240);
+            background-color: purple;
+            border: 2px solid purple;
+            border-radius: 8px;
+        }
+        .groups{
+            width: 40%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .group-card{
+            width: 35%;
+            position: relative;
+            background: #211d4f;
+            border:1px solid #4f46e5;
+            border-radius:10px;
+            padding:10px;
+            transition: 0.3s;
+        }
+        .group-card:hover{
+            transform:translateY(-6px);
+            border-color:#15d2ff;
+        }
+        .group-card h3{
+            color:#fff;
+            font-family:'Oswald',sans-serif;
+            margin-bottom:10px;
+        }
+        .group-card p{
+            color:#b8b8cb;
+            font-size: medium;
+            line-height:1.6;
+            margin-bottom:10px;
+        }
+        .group-card h4{
+            color: #b8b8cb;
+            font-size: 10px;
+        }
+        .card-footer{
+            display:flex;
+            justify-content:space-between;
+            align-items: center;
+        }
+        .spots{
+            color:#ff8c1a;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h4>ELEVATE YOUTH</h4>
+        </div>
+        <div class="navbar">
+            <a href="">EVENTS</a>
+            <a href="">GROUPS</a>
+            <a href="">WATCH</a>
+            <a href="">ABOUT</a>
+            <a href="">PARENTS</a>
+
+            <div class="btn">
+                <a href="">I'm New</a>
+            </div>
+        </div>
+    </nav>
+    <div class="image1">
+       <div class="herotext">
+             <h5>Wednesday at 6:30</h5>
+            <h1>RISE HIGHER</h1>
+            <h3>You weren't made to do life alone. Find your people, grow your faith, and make an impact.</h3>
+       </div>
+    </div>
+    <div class="box1">
+        <h3>What's Happening</h3>
+        <h1>UPCOMING EVENTS</h1>
+        <a href="">View all Events</a>
+        <div class="box">
+            <h4>FEATURED</h4>
+            <p>Every Wednesday · 6:30 PM - 8:30 PM</p>
+            <h2>ELEVATE NIGHT</h2>
+            <P>Our weekly gathering! Expect high-energy worship, real talk, and your crew. Doors open at 6:00 PM.</P>
+            <a href="">Learn More</a>
+        </div>
+        <div class="box">
+            <h4>FEATURED</h4>
+            <p>July 14-19, 2025 · All Week</p>
+            <h2>SUMMER CAMP 2025</h2>
+            <p>A week you'll never forget. 5 days of adventure, worship, and life-changing moments in the mountains.</p>
+            <div class="btn">
+                <a href="">Register Now</a>
+            </div>
+        </div>
+        <div class="small-events">
+            <div class="small-card">
+                <img src="photo 5.jpg" alt="">
+                <p>March 15, 2025</p>
+                <h3>City Serve Day</h3>
+                <h4>8:00 AM - 2:00 PM</h4>
+            </div>
+            <div class="small-card">
+                <img src="photo 6.jpg" alt="">
+                <p>April 4-6, 2025</p>
+                <h3>Spring Retreat</h3>
+                <h4>Friday 5 PM - Sunday 12 PM</h4>
+            </div>
+            <div class="small-card">
+                <img src="photo 7.jpg" alt="">
+                <p>First Friday Monthly</p>
+                <h3>Worship Night</h3>
+                <h4>7:00 PM - 9:00 PM</h4>
+            </div>
+        </div>
+    </div>
+    <div class="box2">
+        <div class="section1">
+            <h6>FIND YOUR CREW</h6>
+            <h3>SMALL GROUPS</h3>
+            <p>Life change happens in circles, not rows. Our small groups meet weekly in homes and on campus for real conversations, prayer, and community. This is where lasting friendships are made.</p>
+            <div class="sec1">
+                <div class="sec1 guys">Guys Groups</div>
+                <div class="sec1 girls">Girls Groups</div>
+                <div class="sec1 coed">Co-ed Groups</div>
+            </div>
+            <div class="btn">
+                <a href="">FIND YOUR GROUP</a>
+            </div>
+        </div>
+        <div class="groups">
+            <div class="group-card">
+                <h3>The Forge</h3>
+                <p>High school guys diving deep into what it means to be a man of God.</p>
+                <h4>Tuesdays · 7:00 PM</h4>
+                <span class="spots">3 spots</span>
+            </div>
+            <div class="group-card">
+                <h3>Bloom</h3>
+                <p>High school girls finding their identity and worth in Christ.</p>
+                <h4>Thursdays · 6:30 PM</h4>
+                <span class="spots">5 spots</span>
+            </div>
+            <div class="group-card">
+                <h3>Foundation</h3>
+                <p>Middle schoolers building a strong faith foundation together.</p>
+                <h4>Sundays · 4:00 PM</h4>
+            </div>
+            <div class="group-card">
+                <h3>Band of Brothers</h3>
+                <p>Accountability, adventure, and authentic faith for junior/senior..</p>
+                <h4>Mondays · 7:30 PM</h4>
+                <span class="spots">2 spots</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
